@@ -65,9 +65,9 @@ public class Pizza {
 
     public String getBill(){
         this.bill = ("Base Price Of The Pizza: " + (isVeg?300:400)+
-                     "\nExtra Cheese Added: 80"  +
-                     "\nExtra Toppings Added: "  + (isVeg?70:120) +
-                     (isPaperbag?"\nPaperbag Added: 20":"") +
+                    (isCheese?("\nExtra Cheese Added: 80"):" ") +
+                    (isToppings?("\nExtra Toppings Added: "  + (isVeg?70:120)):"") +
+                    (isPaperbag?("\nPaperbag Added: 20"):"") +
                      "\nTotal Price: "+ this.price + "\n"
                     );
         return this.bill;
